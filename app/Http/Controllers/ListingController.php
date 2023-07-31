@@ -14,7 +14,8 @@ class ListingController extends Controller
     {
         return inertia(
             'Listing/Index',//bu index.vue sayfası
-            ['listings' => Listing::all()] //buda data
+            ['listings' => Listing::all()] //buradan vue sayfasına gidiyor
+            
         );
     }
 
@@ -23,7 +24,7 @@ class ListingController extends Controller
      */
     public function create()
     {
-        //
+        return inertia('Listing/Create');
     }
 
     /**
@@ -31,7 +32,11 @@ class ListingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Listing::create($request->all());
+
+        return redirect()->route('listing.index')->with('success','listing was created!');
+       
+        //dd($request->all());
     }
 
     /**
