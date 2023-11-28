@@ -26,7 +26,7 @@
 
   <main class="container mx-auto p-4">
 
-    <div v-if="flashSuccess" class="mb-4 border rounded-md shadow-md border-green-300 bg-green-100 dark:border-green-800 dark:bg-green-900 p-2">
+    <div v-if="flashSuccess" class="mb-4 border rounded-md shadow-md border-green-300 bg-green-100 dark:border-green-1000 dark:bg-green-900 p-2">
   
       {{ flashSuccess }}
     
